@@ -1,0 +1,12 @@
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 215px;
+    margin-right: 215px;
+}
+
+.container.head {
+    display: flex;
+    align-items: center;
+}
