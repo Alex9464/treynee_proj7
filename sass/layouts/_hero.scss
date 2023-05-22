@@ -12,14 +12,13 @@
     background-position: center;
     width: 1600px;
     height: 600px;
-}
-
-.hero-title {
-    color: var(--primary-bcg-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    margin-bottom: 30px;
+    &-title {
+        color: var(--primary-bcg-color);
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        margin-bottom: 30px;
+    }
 }
 
 .button {

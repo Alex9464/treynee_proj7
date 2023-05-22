@@ -42,10 +42,36 @@ body {
   margin-left: 215px;
   margin-right: 215px;
 }
-
 .container.head {
   display: flex;
   align-items: center;
+}
+
+.features-list,
+.presentation-list,
+.team-list {
+  gap: 30px;
+}
+
+.container.features,
+.container.head,
+.hero,
+.features,
+.container.presentation,
+.clients.container,
+.foot-container,
+.container.portfolio {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-nav .list,
+.features .list,
+.presentation-list,
+.presentation-text,
+.team-section .list,
+.foot-container {
+  display: flex;
 }
 
 .visually-hiden {
@@ -298,10 +324,6 @@ header {
   z-index: 9;
 }
 
-.logo.link {
-  margin-right: 93px;
-}
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -311,35 +333,20 @@ header {
   color: var(--color-logo);
   text-decoration: none;
 }
-
+.logo.link {
+  margin-right: 93px;
+}
 .logo span {
   color: var(--accent-color);
-}
-
-.site-nav .list,
-.auth-nav,
-.features .list,
-.presentation-list,
-.team-section .list {
-  display: flex;
-  align-items: stretch;
 }
 
 .site-nav {
   height: 48px;
   margin-top: 32px;
 }
-
-.auth-nav {
-  margin-left: auto;
-  align-items: center;
-}
-
-.site-nav li + li,
-.auth-nav li + li {
+.site-nav li + li {
   margin-left: 50px;
 }
-
 .site-nav .link {
   position: relative;
   display: inline-block;
@@ -351,6 +358,37 @@ header {
   text-decoration: none;
   color: var(--title-text-color);
   overflow: hidden;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.auth-nav li + li {
+  margin-left: 50px;
+}
+.auth-nav .link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  display: flex;
+  fill: var(--decorating-color);
+}
+.auth-nav .link:hover,
+.auth-nav .link:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link.current::after {
@@ -375,29 +413,9 @@ header {
     transform: translateX(0);
   }
 }
-.auth-nav .link {
-  color: var(--primary-text-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  display: flex;
-  fill: var(--decorating-color);
-}
-
 .icon-mail,
 .icon-smartphone {
   margin-right: 10px;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus,
-.auth-nav .link:hover,
-.auth-nav .link:focus {
-  color: var(--accent-color);
-  fill: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero {
@@ -412,7 +430,6 @@ header {
   width: 1600px;
   height: 600px;
 }
-
 .hero-title {
   color: var(--primary-bcg-color);
   font-weight: 900;
@@ -458,24 +475,13 @@ header {
   margin: 0;
 }
 
-.icon-features {
+.features-icon {
   width: 270px;
   height: 120px;
   background-color: var(--secondary-bcg-color);
   justify-content: center;
   align-items: center;
   display: flex;
-}
-
-.container.head,
-.hero,
-.features,
-.container.presentation,
-.clients.container,
-.foot-container,
-.container.portfolio {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .presentation-title,
@@ -499,7 +505,6 @@ header {
   bottom: 0;
   width: 370px;
   height: 70px;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Roboto";
@@ -514,15 +519,8 @@ header {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .presentation-thumb:hover .presentation-text {
   transform: translateY(0);
-}
-
-.features-list,
-.presentation-list,
-.team-list {
-  gap: 30px;
 }
 
 .team-section {
@@ -582,7 +580,6 @@ header {
   height: 44px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .social-link:hover {
   background-color: var(--accent-color);
   fill: var(--primary-bcg-color);
@@ -618,14 +615,14 @@ header {
   fill: var(--decorating-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .client-link:hover {
   fill: var(--accent-color);
   border: 1px solid var(--accent-color);
 }
 
-.foot-container {
-  display: flex;
+footer {
+  background-color: #2F303A;
+  padding: 60px 0;
 }
 
 .contacts-section {
@@ -636,6 +633,9 @@ header {
   color: var(--primary-bcg-color);
 }
 
+address {
+  margin-top: 20px;
+}
 address .link {
   font-style: normal;
   font-weight: 400;
@@ -644,10 +644,6 @@ address .link {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--primary-bcg-color);
-}
-
-address {
-  margin-top: 20px;
 }
 
 .contacts .link {
@@ -684,14 +680,8 @@ address {
   background-color: rgba(255, 255, 255, 0.1019607843);
   fill: var(--primary-bcg-color);
 }
-
 .social-link.foot:hover {
   background-color: var(--accent-color);
-}
-
-footer {
-  background-color: #2F303A;
-  padding: 60px 0;
 }
 
 .subscribe-section {
@@ -752,6 +742,10 @@ footer {
   margin-bottom: 94px;
 }
 
+.filter li + li {
+  margin-left: 8px;
+}
+
 .filter .button {
   font-weight: 500;
   font-size: 16px;
@@ -764,23 +758,17 @@ footer {
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.filter .button:hover, .filter .button:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-bcg-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
 
 .list.filter {
   margin: 94px 0 34px;
   display: flex;
   justify-content: center;
-}
-
-.filter li + li {
-  margin-left: 8px;
-}
-
-.filter .button:hover,
-.filter .button:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-bcg-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 
 .portfolio .link {
@@ -813,9 +801,7 @@ footer {
 .portfolio-list li {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-list li:hover,
-.portfolio-list li:focus {
+.portfolio-list li:hover, .portfolio-list li:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -823,7 +809,6 @@ footer {
   position: relative;
   overflow: hidden;
 }
-
 .portfolio-item p {
   position: absolute;
   top: 0;
@@ -842,8 +827,6 @@ footer {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio-list li:hover .portfolio-item p,
-.portfolio-list li:focus .portfolio-item p {
+.portfolio-list li:hover .portfolio-item p, .portfolio-list li:focus .portfolio-item p {
   transform: translateY(0%);
 }/*# sourceMappingURL=main.css.map */
